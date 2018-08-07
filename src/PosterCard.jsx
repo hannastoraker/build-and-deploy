@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
+import Button from 'material-ui/Button';
 
 const styles = {
   card: {
@@ -24,8 +25,7 @@ const PosterCard = ({ classes, posterUrl, movieDetails }) => (
         </Typography>
         <Typography component="p">{movieDetails.overview}</Typography>
       </CardContent>
-      <CardActions>
-        {/* TODO */}
+      <CardActions><Button variant="outlined" href={`https://www.themoviedb.org/movie/${movieDetails.id}`} color="secondary" className={classes.button}>Read More</Button>
       </CardActions>
     </Card>
   </div>
